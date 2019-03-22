@@ -14,35 +14,39 @@ export default class PagingSource {
     this.pageSize = pageSize
   }
 
-  async getList ({ page, pageSize }) {
-    return {
+  getList ({ page, pageSize }) {
+    return Promise.resolve({
       page: this.page,
       pageSize: this.pageSize,
       list: [],
       total: 0
-    }
+    })
   }
 
-  async refresh () {
+  refresh () {
     if (this.#selfChanging) {
       return
     }
     const currentRequest = ++this.#requesting
-    const res = await this.getList({
+    return this.getList({
       page: this.page,
       pageSize: this.pageSize
     })
-    if (currentRequest !== this.#requesting) {
-      return
-    }
-    const { page, pageSize, total, list } = res
-    this.#selfChanging = true
-    Vue.set(this, 'list', list)
-    Vue.set(this, 'total', total)
-    Vue.set(this, 'page', page)
-    Vue.set(this, 'pageSize', pageSize)
-    await Vue.nextTick()
-    this.#selfChanging = false
+      .then(res => {
+        if (currentRequest !== this.#requesting) {
+          return
+        }
+        const { page, pageSize, total, list } = res
+        this.#selfChanging = true
+        Vue.set(this, 'list', list)
+        Vue.set(this, 'total', total)
+        Vue.set(this, 'page', page)
+        Vue.set(this, 'pageSize', pageSize)
+        return Vue.nextTick()
+      })
+      .then(() => {
+        this.#selfChanging = false
+      })
   }
 
   bind (vm) {
