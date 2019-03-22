@@ -1,4 +1,4 @@
-import Pageable from './typings/Pageable'
+import Pageable from './src/Pageable'
 
 export default Pageable
-export { default as PagingSource } from './typings/PagingSource'
+export { default as PagingSource } from './src/PagingSource'
