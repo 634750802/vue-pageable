@@ -19,5 +19,5 @@ GitHub API has rate restrictions, result may not display well.
 :::
 
 <ClientOnly>
-    <Demo />
+  <Demo />
 </ClientOnly>
