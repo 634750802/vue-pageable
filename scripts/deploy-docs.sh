@@ -24,6 +24,6 @@ git commit -m 'Deploy docs'
 # git push -f git@github.com:<USERNAME>/<USERNAME>.github.io.git master
 
 # if you are deploying to https://<USERNAME>.github.io/<REPO>
-git push -f https://github.com/634750802/vue-pageable master:gh-pages
+git push -f git@github.com:634750802/vue-pageable master:gh-pages
 
 cd -
