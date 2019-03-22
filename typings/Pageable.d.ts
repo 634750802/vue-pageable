@@ -1,7 +1,5 @@
-import { FunctionalComponentOptions, CreateElement, VNodeData } from 'vue'
+import { FunctionalComponentOptions} from 'vue'
 
-interface Pageable extends FunctionalComponentOptions {
-
-}
+declare const Pageable: FunctionalComponentOptions
 
 export default Pageable

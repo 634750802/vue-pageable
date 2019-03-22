@@ -6,7 +6,7 @@ export default abstract class PagingSource<T> {
   readonly total: number
   readonly list: T[]
 
-  constructor (page?: number, pageSize?: number)
+  protected constructor (page?: number, pageSize?: number)
 
   abstract getList (paging: { page: number, pageSize: number }): Promise<{ list: T[], total: number, page: number, pageSize: number }>
 
