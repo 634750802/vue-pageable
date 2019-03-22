@@ -1,4 +1,4 @@
-import PagingSource from '@/PagingSource'
+import PagingSource from '../PagingSource'
 import axios from 'axios'
 
 export default class GitHubSearchingRepositoryPagingSource extends PagingSource {

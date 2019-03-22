@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div class="demo-app">
     <Pageable :paging-source="pagingSource" v-slot="{ list, page, pageSize, totalPages, hasNext, hasPrev, total }">
       <div v-for="item in list" class="github-repository" :key="item.id">
         <a :href="item.html_url">{{item.full_name}}</a>
@@ -22,7 +22,7 @@
 
 <script>
   import Pageable from './Pageable'
-  import GitHubSearchingRepositoryPagingSource from '@/demo/GitHubSearchingRepositoryPagingSource'
+  import GitHubSearchingRepositoryPagingSource from './demo/GitHubSearchingRepositoryPagingSource'
 
   export default {
     name: 'app',
@@ -49,7 +49,7 @@
 </script>
 
 <style>
-  #app {
+  .demo-app {
     font-family: 'Avenir', Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;

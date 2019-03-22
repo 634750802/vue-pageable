@@ -1,34 +1,9 @@
+[![CircleCI](https://circleci.com/gh/634750802/vue-pageable.svg?style=svg)](https://circleci.com/gh/634750802/vue-pageable)
+
+[![NPM](https://nodei.co/npm/vue-pageable.png?compact=true)](https://npmjs.org/package/vue-pageable)
+
 # vue-pageable
 
-## Project setup
-```
-npm install
-```
+Vue pageable is aimed to support common paging logic.
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Run your tests
-```
-npm run test
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Run your unit tests
-```
-npm run test:unit
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+[Demo](https://634750802.github.io/vue-pageable)
