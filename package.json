@@ -1,0 +1,28 @@
+{
+  "name": "vue-pageable",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build --target lib --name index src/index.js",
+    "test:unit": "vue-cli-service test:unit"
+  },
+  "dependencies": {
+    "vue": "^2.6.6"
+  },
+  "main": "dist/index.common.js",
+  "devDependencies": {
+    "@babel/plugin-proposal-private-methods": "^7.4.0",
+    "@types/chance": "^1.0.1",
+    "@types/jest": "^24.0.11",
+    "@vue/cli-plugin-babel": "^3.5.0",
+    "@vue/cli-plugin-unit-jest": "^3.5.0",
+    "@vue/cli-service": "^3.5.0",
+    "@vue/test-utils": "1.0.0-beta.29",
+    "axios": "^0.18.0",
+    "babel-core": "7.0.0-bridge.0",
+    "babel-jest": "^23.6.0",
+    "chance": "^1.0.18",
+    "vue-template-compiler": "^2.5.21"
+  }
+}
