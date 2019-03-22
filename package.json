@@ -3,12 +3,13 @@
   "version": "0.1.0",
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build --target lib --name index src/index.js",
+    "build": "vue-cli-service build --target lib --name index index.js",
     "test:unit": "vue-cli-service test:unit"
   },
   "dependencies": {
     "vue": "^2.6.6"
   },
+  "typings": "typyings/index",
   "main": "dist/index.common.js",
   "devDependencies": {
     "@babel/plugin-proposal-private-methods": "^7.4.0",
