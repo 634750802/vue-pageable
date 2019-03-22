@@ -3,11 +3,11 @@
   "version": "0.2.0",
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build --target lib --name index index.js",
+    "build": "vue-cli-service build --target lib --name VuePageable index.js",
     "test:unit": "vue-cli-service test:unit"
   },
   "typings": "typyings/index",
-  "main": "dist/index.common.js",
+  "main": "dist/VuePageable.common.js",
   "devDependencies": {
     "vue": "^2.6.6",
     "@babel/plugin-proposal-private-methods": "^7.4.0",
