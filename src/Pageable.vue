@@ -16,9 +16,9 @@
       const hasNext = page < totalPages
       const hasPrev = page > 1
       return h('div', [
-        scopedSlots.list ? scopedSlots.list({ list: list }) : '',
-        scopedSlots.default ? scopedSlots.default() : '',
-        scopedSlots.pager ? scopedSlots.pager({ page, pageSize, total, totalPages, hasNext, hasPrev }) : ''
+        scopedSlots.default
+          ? scopedSlots.default({ list: list, page, pageSize, total, totalPages, hasNext, hasPrev })
+          : ''
       ])
     }
   }
