@@ -1,4 +1,4 @@
-import Pageable, { PagingSource } from '@/index'
+import Pageable, { PagingSource } from '../../index'
 import RealPagingSource from '@/PagingSource'
 
 describe('Pageable.vue', () => {
